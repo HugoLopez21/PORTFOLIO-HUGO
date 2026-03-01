@@ -1,0 +1,56 @@
+/*
+BUCLE 
+-Recorre los números del 1 al 15
+-Cada núm representa una escala de espacio
+- º = rem / 2 = 2rem etc
+*/
+
+@for $i from 1 through 15 {
+    .space#{$i} {
+        margin: ($i * 1rem) 0;
+    }
+
+    .spacetop#{$i} {
+        margin-top: $i * 1rem;
+    }
+
+    .spacebottom#{$i} {
+        margin-bottom: $i * 1rem;
+    }
+
+    .spaceright#{$i} {
+        margin-right: $i * 1rem;
+    }
+
+    .spaceleft#{$i} {
+        margin-left: $i * 1rem;
+    }
+
+    .spacer#{$i} {
+        padding: ($i * 1rem) 0;
+    }
+
+    .padding#{$i} {
+        padding: $i * 1rem;
+    }
+
+    .paddingside#{$i} {
+        padding-top: $i * 1rem;
+    }
+
+    .paddingtop#{$i} {
+        padding-top: $i * 1rem;
+    }
+
+    .paddingbottom#{$i} {
+        padding-bottom: $i * 1rem;
+    }
+
+    .paddingright#{$i} {
+        padding-right: $i * 1rem;
+    }
+
+    .paddingleft#{$i} {
+        padding-left: $i * 1rem;
+    }
+}

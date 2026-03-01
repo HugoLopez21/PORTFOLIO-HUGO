@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Llista de Tasques</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" id="nova-tasca" placeholder="Nova tasca...">
+        <button id="afegeix-tasca" onclick="agregaTarea()">Afegir Tasca</button>
+
+        <div>
+            <button id="filtra-pendents" onclick="filtroPendientes()">Pendents</button>
+            <button id="filtra-completades" onclick="filtroCompletas()">Completades</button>
+            <button id="mostra-totes" onclick="filtroTodasTareas()">Totes</button>
+        </div>
+
+        <ul id="llista-tasques"></ul>
+        <div id="estadistiques">
+            <p>Total Tasques: <span id="total-tasques">0</span></p>
+            <p>Tasques Completades: <span id="tasques-completades">0</span></p>
+            <p>Tasques Pendents: <span id="tasques-pendents">0</span></p>
+        </div>
+    </div>
+
+    <script>
+        // L'estat de l'aplicació
+
+        let contadorTareas = 0
+
+        const estat = {
+            tasques: [], // La llista de tasques introduïdes
+            filtre: null // El filtre actual: null, "pendents" o "completades"
+        };
+
+
+        const ulTareas = document.getElementById('llista-tasques'); //Guarda la lista de tareas del html
+
+        //Devuelve lista de todas las tareas agregadas
+        function todasTareas(){
+            estat.filtre = null
+            return estat.tasques
+        }
+        
+
+        function agregaTarea(){
+            const tarea = {
+                id: contadorTareas,
+                texto: document.getElementById('nova-tasca').value,
+                estado: 'pendiente'
+            };           
+            
+            const li = document.createElement('li'); //Creamos elemento li para añadir posteriormente las tareas
+            li.dataset.id = tarea.id //Asignacion de id al objeto
+            li.textContent = tarea.texto //Le damos el valor param ostrar
+            ulTareas.appendChild(li) //Lo añade a la lista
+            li.style.background = 'red'
+            
+            estat.tasques.push(tarea) 
+            console.log(estat.tasques)
+            
+            actualizarEstadisticas()
+            contadorTareas +=1
+        }
+
+
+
+        function mostrarTareas(lista){
+            ulTareas.innerHTML = ''
+
+            lista.forEach(t => {
+                const li = document.createElement('li')
+                li.dataset.id = t.id
+                li.textContent = t.texto
+                li.style.background = t.estado === 'completa' ? 'green' : 'red'
+                ulTareas.appendChild(li)
+            })
+        }
+        
+        
+        function filtroPendientes(){
+    
+            const tareas = todasTareas()
+            const tareasPendientes = tareas.filter(t => t.estado === 'pendiente' )
+            mostrarTareas(tareasPendientes)
+            actualizarEstadisticas()
+
+        }
+
+        function filtroCompletas(){
+    
+            const tareas = todasTareas()
+            const tareasCompletadas = tareas.filter(t => t.estado === 'completa' )
+            mostrarTareas(tareasCompletadas)
+            actualizarEstadisticas()          
+        }
+        
+
+        function filtroTodasTareas(){
+            mostrarTareas(todasTareas())
+        }
+
+
+        function actualizarEstadisticas(lista){
+
+            const total = document.getElementById('total-tasques')
+            const pendientes = document.getElementById('tasques-pendents')
+            const completadas =  document.getElementById('tasques-completades')
+            const todas = todasTareas()
+            total.textContent = todas.length
+
+            completadas.textContent = todas.filter(t => t.estado === 'completa').length
+            pendientes.textContent = todas.filter(t => t.estado === 'pendiente').length
+            
+        }
+
+        ulTareas.addEventListener('click', (e) => {
+            if (e.target.tagName === 'LI') {
+                const id = Number(e.target.dataset.id); // obtener id de la tarea
+                const tarea = estat.tasques.find(t => t.id === id)
+
+         
+
+                if (tarea.estado === 'pendiente'){
+                    tarea.estado = 'completa'
+                    e.target.style.background = 'green'
+                }else{
+                    tarea.estado = 'pendiente'
+                    e.target.style.background = 'red'
+                }
+            
+                actualizarEstadisticas(estat.tasques)
+            }
+        });
+
+
+
+
+
+        // TODO: Implementar la funcionalitat
+        // - Configurar esdeveniments dels botons
+        // - Implementar afegir nova tasca
+        // - Implementar marcar/desmarcar com a completada
+        // - Implementar filtres
+        // - Implementar actualització d'estadístiques
+    </script>
+</body>
+</html>

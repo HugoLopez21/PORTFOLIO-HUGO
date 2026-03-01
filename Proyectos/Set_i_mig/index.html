@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PRACTICA7</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="visualizacion">
+        <div id="crup">
+            <div class="contenido crup">
+            <button id="btn-comenzar" class="btn">COMENZAR PARTIDA</button>
+            <h3 id="info-partida"></h3>
+            </div>
+        </div>
+        
+        <div id="section-players">
+            <div id="jugador" class="contenido jugador">
+                <h3>JUGADOR</h3>
+                <h2 id="puntTotPersona">PUNTUACIÓN TOTAL: 0</h2>
+                <p id="puntosPersona" class="puntos">PUNTOS</p>
+                <canvas id="canva-Jugador" class="canva" width="650" height="320"></canvas>
+            </div>
+
+            <div id="botonesInter">
+                <button id="btn-solicitar" class="btn">SOLICITAR CARTA</button>
+                <button id="btn-plantarse" class="btn" >PLANTARSE</button>
+            </div>
+
+            <div id="maquina" class="contenido maquina">
+                <h3>MAQUINA</h3>
+                <h2 id="puntTotMaquina">PUNTUACIÓN TOTAL: 0</h2>
+                <p id="puntosMaquina" class="puntos">PUNTOS</p>
+                <canvas id="canva-Máquina" class="canva" width="650" height="320"></canvas>
+            </div>
+        
+        </div>
+    </section>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

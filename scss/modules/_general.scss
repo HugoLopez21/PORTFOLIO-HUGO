@@ -1,0 +1,38 @@
+*{
+    border: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s linear;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 10px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+.font2{
+    font-family: "Playfair Display", serif;
+}
+h1,
+h2,
+h3{
+    margin: 0;
+    line-height: 120%;
+}
+
+.section-titulo {
+    text-align: center;
+    font-size: 40px;
+}
+
+p,
+h4,
+h5{
+    margin: 0;
+    line-height: 180%;
+}
+button{
+    font-family: inherit;
+}

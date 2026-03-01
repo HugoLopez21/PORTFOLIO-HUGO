@@ -1,0 +1,30 @@
+/*
+BUCLE PARA TAMAÑOS DE TEXTO
+-Recorre los número del 1 al 15
+*/
+@for $i from 1 through 15{
+    .size#{$i}
+    {
+        font-size: $i * 1rem;
+        /*Ejemplo:
+        .size1 -> 1 x 1rem = 1rem
+        .size2 -> 2 x 1rem = 2rem*/
+    }
+}
+
+//LINE - HEIGHT
+.lh14{
+    line-height: 140%;
+}
+.lh12{
+    line-height: 120%;
+}
+.lnh18{
+    line-height: 180%;
+}
+.bold{
+    font-weight: bold;
+}
+.underline{
+    text-decoration: none;
+}

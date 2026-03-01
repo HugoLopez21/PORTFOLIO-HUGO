@@ -1,0 +1,16 @@
+{
+"companyName": "GitanicosGames",
+"productName": "EntregaTareaVideojuegos",
+"productVersion": "0.1",
+"dataUrl": "Juego2.data.unityweb",
+"wasmCodeUrl": "Juego2.wasm.code.unityweb",
+"wasmFrameworkUrl": "Juego2.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 1.0","WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.40f1"
+}

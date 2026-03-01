@@ -1,0 +1,120 @@
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.conthalf {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+//JUSTIFY CONTENT
+.jc {
+    &-center {
+        justify-content: center;
+    }
+
+    &-between {
+        justify-content: space-between;
+    }
+    &-start {
+        justify-content: flex-start;
+    }
+
+    &-end {
+        justify-content: flex-end;
+    }
+
+    &-around {
+        justify-content: space-around;
+    }
+
+    &-evenly {
+        justify-content: space-evenly;
+    }
+}
+
+//ALIGN ITEMS
+
+.ai {
+    &-center {
+        align-items: center;
+    }
+
+    &-end {
+        align-items: flex-end;
+    }
+}
+
+//ALINEACIÓN DE TEXTO = TEXT ALIGN
+.ta {
+    &-center {
+        text-align: center;
+    }
+
+    &-right {
+        text-align: right;
+    }
+    &-left {
+        text-align: left;
+    }
+
+    &-justify {
+        text-align: justify;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.overhidden {
+    overflow: hidden;
+}
+
+/*
+BUCLE @for
+-Recorre los números del 1 al 12
+-Cada vuelta del bucle crea una clase nueva
+-$i representar el número que TÚ LE DAS A LA COLUMNA
+*/
+
+@for $i from 1 through 12 {
+
+    .col#{$i} {
+        /*
+        #($i) es interpolación de SASS
+        -Genera las clases, col1,col2....
+        */
+        width: percentage($i/ 12);
+
+        /*
+        -$i es el número de columnas que ocupa
+        -12 es el total de columnas
+        -i/12 calcula la fracción del ancho total
+        -percentage convierte el número en porcentaje
+        Por ejemplo: .col6 -> 6/12 = 0.5 -> 50%
+        */
+    }
+}
+
+//bluce gap
+@for $i from 1 through 12 {
+    .gap#{$i} {
+        gap: $i * 1rem;
+    }
+}

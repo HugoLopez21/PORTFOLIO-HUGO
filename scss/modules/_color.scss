@@ -1,0 +1,79 @@
+// Colores Base
+$black:#000000;
+$yellow:#FFD700;
+$dark-gray:#1A1A1B;
+
+
+$halfblack:rgba(0, 0, 0, 0.5);
+$quarterblack:rgba(0, 0, 0, 0.25);
+
+
+$halfyellow:rgba(255, 215, 0, 0.4);
+$quarteryellow:rgba(255, 215, 0, 0.25);
+
+//textos secundarios
+$white: #FFFFFF;
+$halfwhite:rgba(255, 255, 255, 0.5);
+$quarterwhite:rgba(255, 255, 255, 0.25);
+
+$gradiente: radial-gradient(circle at center, #1a1a1b 0%, #000000 100%);
+
+
+// Fondos
+.bg-black {
+    background-color: $black;
+}
+
+.bg-yellow {
+    background-color: $yellow;
+}
+
+.bg-dark-gray {
+    background-color: $dark-gray;
+}
+
+.bg-halfblack {
+    background: $halfblack;
+}
+
+.bg-quarterblack {
+    background: $quarterblack;
+}
+
+.bg-halfyellow {
+    background: $halfyellow;
+}
+
+
+// fondos imagenes
+.bg-image {
+    background-color: $black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+// Texto
+.text-black {
+    color: $black;
+}
+
+.text-yellow {
+    color: $yellow;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-halfwhite {
+    color: $halfwhite;
+}
+
+.text-halfblack {
+    color: $halfblack;
+}
+
+.text-quarterwhite {
+    color: $quarterwhite;
+}
