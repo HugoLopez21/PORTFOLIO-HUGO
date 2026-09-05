@@ -24,3 +24,22 @@ window.addEventListener("scroll", updateNavbar, { passive: true });
 
 // Al cargar: si recargas estando ya a mitad de página, ajusta el navbar correctamente
 window.addEventListener("load", updateNavbar);
+
+// --- Menú hamburguesa (móvil) ---
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelectorAll(".navbar a");
+
+if (navToggle) {
+  navToggle.addEventListener("click", function () {
+    const isOpen = document.body.classList.toggle("menu-open");
+    navToggle.setAttribute("aria-expanded", isOpen);
+  });
+
+  // Al pulsar un enlace del menú, lo cerramos automáticamente
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      document.body.classList.remove("menu-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}

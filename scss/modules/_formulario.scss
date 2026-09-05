@@ -36,6 +36,7 @@
         &:focus {
             border-color: $yellow;
             box-shadow: 0 8px 24px rgba(255,215,0,0.08);
+            color: $white;
             transform: translateY(-2px);
             outline: none;
         }

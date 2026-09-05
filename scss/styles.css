@@ -656,6 +656,7 @@ BUCLE PARA TAMAÑOS DE TEXTO
 .campo textarea:focus {
   border-color: #FFD700;
   box-shadow: 0 8px 24px rgba(255, 215, 0, 0.08);
+  color: #FFFFFF;
   transform: translateY(-2px);
   outline: none;
 }
@@ -1874,5 +1875,222 @@ footer {
 @keyframes pulse {
   50% {
     transform: scale(1.1);
+  }
+}
+@media (max-width: 768px) {
+  .col1 {
+    width: 100%;
+  }
+  .col2 {
+    width: 100%;
+  }
+  .col3 {
+    width: 100%;
+  }
+  .col4 {
+    width: 100%;
+  }
+  .col5 {
+    width: 100%;
+  }
+  .col6 {
+    width: 100%;
+  }
+  .col7 {
+    width: 100%;
+  }
+  .col8 {
+    width: 100%;
+  }
+  .col9 {
+    width: 100%;
+  }
+  .col10 {
+    width: 100%;
+  }
+  .col11 {
+    width: 100%;
+  }
+  .col12 {
+    width: 100%;
+  }
+  .row {
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background-color: #000000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 15;
+  }
+  .navbar a {
+    font-size: 2rem;
+  }
+  body.menu-open .navbar {
+    transform: translateX(0);
+  }
+  body.menu-open .nav-toggle span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  body.menu-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  body.menu-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .hero-section {
+    text-align: center;
+  }
+  .hero-section .row {
+    flex-direction: column-reverse;
+  }
+  .hero-section .flex.jc-center.gap2 {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .hero-content h1.size6 {
+    font-size: 3.4rem;
+  }
+  .hero-content h2.size2 {
+    font-size: 1.6rem;
+  }
+  .flex.jc-center.gap2 {
+    flex-direction: column;
+    width: 100%;
+  }
+  .flex.jc-center.gap2 .btn,
+  .flex.jc-center.gap2 .btn-sec {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .section-titulo {
+    font-size: 2.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .carrusel-proyectos {
+    height: 480px;
+    margin: 3rem auto;
+  }
+  .carrusel-proyectos .slide .item {
+    width: 100%;
+    height: 100%;
+  }
+  .carrusel-proyectos .slide .item:nth-child(3), .carrusel-proyectos .slide .item:nth-child(4), .carrusel-proyectos .slide .item:nth-child(5), .carrusel-proyectos .slide .item:nth-child(n+6) {
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .carrusel-proyectos .slide .item:nth-child(1), .carrusel-proyectos .slide .item:nth-child(2) {
+    left: 0;
+  }
+  .item .content {
+    left: 20px;
+    width: calc(100% - 40px);
+    padding: 15px;
+  }
+  .content .name {
+    font-size: 2.2rem;
+  }
+  .content .des {
+    font-size: 1.3rem;
+  }
+  .button {
+    left: 0;
+    right: 0;
+    bottom: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .form {
+    padding: 1.5rem;
+    margin: 0 5%;
+  }
+  .envia-form {
+    justify-content: center;
+  }
+  .envia-form .btn-small {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 1040px) {
+  #scene {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #scene {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    overflow: visible;
+    margin-bottom: 350px;
+  }
+  #scene #left-zone {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  #scene #left-zone .list {
+    width: 100%;
+  }
+  #scene #left-zone .list li.item-hab input[type=radio] ~ label {
+    position: relative;
+    text-align: left;
+    padding-left: 80px;
+  }
+  #scene #left-zone .list li.item-hab input[type=radio] ~ label[class*=label_]::before {
+    left: 15px;
+    top: 50%;
+    margin-left: 0;
+    transform: translateY(-50%);
+  }
+  #scene #left-zone .list li.item-hab input[type=radio] ~ .content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    background-color: #1A1A1B;
+    border-radius: 12px;
+    padding: 20px 15px 25px;
+    display: none;
+    animation: none;
+  }
+  #scene #left-zone .list li.item-hab input[type=radio] ~ .content p {
+    max-width: 100%;
+  }
+  #scene #left-zone .list li.item-hab input[type=radio]:checked ~ .content {
+    display: flex;
+    animation: none;
+  }
+  #scene #right-zone {
+    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
