@@ -54,69 +54,77 @@
         <!-- Technical skills -->
     <section id="about" class="container spacetop4">
       <div class="container row jc-center">
-        <h2 class="text-yellow section-titulo space3">Abilities and technologies</h2>
+        <h2 class="text-yellow section-titulo space3">Abilities and Technologies</h2>
         <div id="scene">
           <div id="left-zone">
             <ul class="list">
+
+              <!-- HTML -->
               <li class="item-hab">
                 <input type="radio" id="radio_html" name="basic_carousel" value="html" checked />
-                <label class="label_html" for="radio_html">HTML</label>
+                <label class="label_html" for="radio_html">HTML5</label>
                 <div class="content content_html">
                   <span class="picto"></span>
-                  <h1>HTML</h1>
-                  <p>Layout of web structures using semantic tags and current standards to organize content logically.</p>
+                  <h1>HTML5</h1>
+                  <p>Structuring scalable and accessible web architectures. Applied across all projects to build semantic, SEO-friendly layout foundations.</p>
                 </div>
               </li>
 
-
+              <!-- CSS -->
               <li class="item-hab">
                 <input type="radio" id="radio_css" name="basic_carousel" value="css" />
-                <label class="label_css" for="radio_css">CSS</label>
+                <label class="label_css" for="radio_css">CSS3 & Styling</label>
                 <div class="content content_css">
                   <span class="picto"></span>
-                  <h1>CSS</h1>
-                  <p>Design and styling of visual interfaces. Implementation of Responsive Design to ensure websites look good on mobile and desktop.</p>
+                  <h1>CSS3 & Styling</h1>
+                  <p>Designing modern, responsive interfaces using Flexbox, CSS Grid, and custom animations. Optimized for seamless desktop and mobile user experiences.</p>
                 </div>
               </li>
 
+              <!-- JavaScript & React -->
               <li class="item-hab">
                 <input type="radio" id="radio_js" name="basic_carousel" value="js" />
-                <label class="label_js" for="radio_js">JavaScript</label>
+                <label class="label_js" for="radio_js">JavaScript & React</label>
                 <div class="content content_js">
                   <span class="picto"></span>
-                  <h1>JavaScript</h1>
-                  <p>Programming interactivity in the browser. DOM manipulation and function creation to add dynamism to web pages.</p>
+                  <h1>JavaScript & React</h1>
+                  <p>Building dynamic Single Page Applications (SPAs). Demonstrated in <strong>Strategy Number</strong> (a strategic numerical puzzle built with React) and in the frontend of <strong>Cómete el Mundo</strong> (React 19, custom hooks, dynamic UI rendering, and API consumption).</p>
                 </div>
               </li>
 
+              <!-- Unity & Game Design -->
               <li class="item-hab">
                 <input type="radio" id="radio_vj" name="basic_carousel" value="vj" />
-                <label class="label_vj" for="radio_vj">Game Design</label>
+                <label class="label_vj" for="radio_vj">Unity & Game Design</label>
                 <div class="content content_vj">
                   <span class="picto"></span>
-                  <h1>Game Design</h1>
-                  <p>Development of 2D and 3D environments and game mechanics. C# scripting to control the behavior of characters and objects.</p>
+                  <h1>Unity & Game Design</h1>
+                  <p>Designing 2D/3D gameplay mechanics, physics, and state management using C# scripting in Unity. Applied in projects like <strong>"The Runner"</strong> and <strong>"The Laberint"</strong> to control object behaviors, collision systems, and user controls.</p>
                 </div>
               </li>
 
+              <!-- Python & Django -->
               <li class="item-hab">
                 <input type="radio" id="radio_python" name="basic_carousel" value="python" />
-                <label class="label_python" for="radio_python">Python</label>
+                <label class="label_python" for="radio_python">Python & Django REST</label>
                 <div class="content content_python">
                   <span class="picto"></span>
-                  <h1>Python</h1>
-                  <p>Backend logic development. Creation of functional web applications, route handling, and views using the Django framework.</p>
+                  <h1>Python & Django REST</h1>
+                  <p>Backend logic design and RESTful API architecture. Developed the core backend for <strong>Cómete el Mundo</strong> using Django 6 and DRF, handling user authentication (JWT/OAuth), custom endpoints, business logic, and security.</p>
                 </div>
               </li>
+
+              <!-- Databases -->
               <li class="item-hab">
                 <input type="radio" id="radio_bd" name="basic_carousel" value="bd" />
                 <label class="label_bd" for="radio_bd">Databases</label>
                 <div class="content content_bd">
                   <span class="picto"></span>
-                  <h1>Databases</h1>
-                  <p>Management and organization of information. Creating tables and executing queries for data storage and retrieval.</p>
+                  <h1>Databases & SQL</h1>
+                  <p>Relational database modeling, query optimization, and ORM integration. Managed data persistence in MySQL for <strong>Cómete el Mundo</strong>, ensuring efficient schema design for users, orders, and restaurant management.</p>
                 </div>
               </li>
+
             </ul>
           </div>
 
@@ -130,13 +138,22 @@
       <div class="carrusel-proyectos">
         <div class="slide">
 
-          
-          <div class="item" style="background-image: url('./media/Proyectos_media/biblio.png');">
+          <div class="item" style="background-image: url('./media/Proyectos_media/strategic.png');">
             <div class="content">
-              <div class="name">Library User Management</div>
-              <div class="des">Small Django app that lets you manage library user cards through a login session</div>
-              <a class="seeMore" target="_blank" href="https://github.com/HugoLopez21/Django_app_library">
-                <button class="btn">See more</button>
+              <div class="name">Strategic Number Merging Game</div>
+              <div class="des">Strategic puzzle game focused on merging numbers to optimize scores and moves. Made as a project in Kocaeli University (Turkey)</div>
+              <a class="seeMore" target="_blank" href="https://github.com/HugoLopez21/Strategic-Number-Mergin-Game">
+                <button class="btn">View on GitHub</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="item" style="background-image: url('./media/Proyectos_media/TFG.png');">
+            <div class="content">
+              <div class="name">Cómete el Mundo (FINAL PROJECT)</div>
+              <div class="des">Full-stack restaurant management web application. Decoupled SPA built with React 19 on the frontend and Django 6 as a REST API with authentication on the backend.</div>
+              <a class="seeMore" target="_blank" href="https://github.com/HugoLopez21/TFG_DAW_FINAL.git">
+                <button class="btn">View on GitHub</button>
               </a>
             </div>
           </div>
@@ -167,31 +184,12 @@
             </div>
           </div>
           
-
-          <div class="item" style="background-image: url('./media/Proyectos_media/set_i_mig.png');">
-            <div class="content">
-              <div class="name">Black Jack Style Game</div>
-              <div class="des">JavaScript game inspired by Black Jack where you must reach a score of 7.5 with Spanish playing cards</div>
-              <a class="seeMore" target="_blank" href="./Proyectos/Set_i_mig/index.html">
-                <button class="btn">I want to play!</button>
-              </a>
-            </div>
-          </div>
-          <div class="item" style="background-image: url('./media/Proyectos_media/flota.jpg');">
-            <div class="content">
-              <div class="name">Battleship</div>
-              <div class="des">Simple Battleship game made with JavaScript for a client-side development class assignment.</div>
-              <a class="seeMore" target="_blank" href="./Proyectos/Hundir_la_flota/index.html">
-                <button class="btn">I want to play!</button>
-              </a>
-            </div>
-          </div>
         </div>
         <div class="button">
             <button class="prev btn">◁</button>
             <button class="next btn">▷</button>
         </div>
-    </section>
+        </section>
 
     <!-- Contact -->
     <section id="contacto" class="container spacebottom10">
@@ -221,6 +219,8 @@
 
   <footer class="spacer2 ta-center bg-dark-gray text-halfwhite">
     <p>&copy; 2026 Hugo López Valladares.</p>
+    <P>hugolopezvalladares21@gmail.com</P>
+    <p>+34 660264312</p>
   </footer>
 
   <a class="btn-cv pulse " href="media/CV-HUGO.pdf" download="CV_Hugo_Lopez">
